@@ -120,8 +120,20 @@
         }
     </style>
     <script src="https://cdn.pubnub.com/pubnub-dev.js"></script>
+    <script src="jquery.js"></script>
 
     <script type="text/javascript">
+
+
+
+
+
+$('html, body').on('touchmove', function(e){ 
+     //prevent native touch activity like scrolling
+     e.preventDefault(); 
+});
+
+
 function generateUUID(){
     var d = new Date().getTime();
     if(window.performance && typeof window.performance.now === "function"){
@@ -213,7 +225,7 @@ var drawTouch = function() {
 
 		e.preventDefault();
         e.stopPropagation();
-        
+
 		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-44;
 		lineTo(x,y);
