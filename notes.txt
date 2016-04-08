@@ -1,0 +1,5 @@
+
+- test PUBNUB.init ssl flag works when run locally from filesystem
+- add multi-touch capabilities
+- technique to have canvas dimensions uniform
+
